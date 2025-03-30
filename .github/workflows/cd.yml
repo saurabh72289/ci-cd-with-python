@@ -1,4 +1,4 @@
-name: Deploy to AWS
+name: Deploy to Render
 
 on:
   push:
@@ -13,6 +13,6 @@ jobs:
       - name: Checkout code  # ✅ Optional: Checks out the repository (if needed)
         uses: actions/checkout@v3
 
-      - name: Deploy to AWS
+      - name: Deploy to Render
         run: | 
           curl -X POST ${{ secrets.DEPLOYMENT_HOOK_URL }}  # ✅ Secure the URL using GitHub Secrets
