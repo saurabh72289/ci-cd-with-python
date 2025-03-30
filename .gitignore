@@ -11,3 +11,5 @@ __pycache__/
 
 # pytest cache
 pytest_cache/
+
+test/__pycache__/
