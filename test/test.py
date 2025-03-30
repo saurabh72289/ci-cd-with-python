@@ -12,7 +12,7 @@ client = TestClient(app)
 def test_health_api():
     response = client.get('/')
     assert response.status_code == 200  # Check if response status is 200 OK
-    assert response.json() == {"message": "this id CI/CD from backend !!!!"}  # Validate response body
+    assert response.json() == {"message": "Server is running", "status": "200"}  # Validate response body
 
     # Print response content (optional)
     print("\n\n\n here after api calling --> \n",response.json(), response.status_code, "\n------api calling")
