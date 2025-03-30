@@ -1,0 +1,18 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main  # ✅ Fixed: `-main` → `- main` (space required)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code  # ✅ Optional: Checks out the repository (if needed)
+        uses: actions/checkout@v3
+
+      - name: Deploy to AWS
+        run: | 
+          curl -X POST ${{ secrets.DEPLOYMENT_HOOK_URL }}  # ✅ Secure the URL using GitHub Secrets

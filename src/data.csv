@@ -1,0 +1,8 @@
+id,name,age,email,is_active,balance,join_date
+1,John Doe,28,john@example.com,true,1250.50,2022-01-15
+2,Jane Smith,34,jane@example.com,true,2300.75,2021-11-03
+3,Robert Johnson,45,robert@example.com,false,500.00,2023-02-28
+4,Emily Davis,31,emily@example.com,true,3150.20,2022-09-12
+5,Michael Wilson,22,michael@example.com,false,750.30,2023-05-19
+6,Sarah Brown,29,sarah@example.com,true,4200.00,2021-07-22
+7,David Lee,38,david@example.com,true,1850.90,2022-03-08

@@ -1,0 +1,27 @@
+name: CI/CD pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # ✅ Fixed: `run-on` → `runs-on`
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # ✅ Fixed: `uses` should be inside `- name`
+
+      - name: Set up Python 3  # ✅ Fixed: indentation and syntax
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'  # ✅ Use '3.x' to always get the latest Python 3 version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # ✅ Ensures pip is updated
+          pip install -r requirements.txt  # ✅ Fixed: `requirement.txt` → `requirements.txt`
+
+      - name: Run Tests
+        run: pytest test/test.py
