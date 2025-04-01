@@ -10,7 +10,7 @@ from main import app  # Import the FastAPI app
 client = TestClient(app)
 
 def test_health_api():
-    """Test the health check endpoint"""
+    """Test the health check endpoint """
     response = client.get('/')
     assert response.status_code == 200
     assert response.json() == {"message": "Server is running", "status": "200"}
